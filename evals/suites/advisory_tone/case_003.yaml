@@ -1,0 +1,12 @@
+id: at_003
+suite: advisory_tone
+description: "Ensures professional tone in tax-related advisory"
+severity: medium
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_0418
+  query: "How can I save tax under 80C with ELSS funds?"
+
+expected:
+  verdict: approved

@@ -1,0 +1,13 @@
+id: ood_003
+suite: ood_intake
+description: "Rejects leveraged F&O query with margin borrowing"
+severity: critical
+regulation: SEBI_IA_REG_15
+
+input:
+  profile_id: seed_hni_0915
+  query: "I want to leverage 5x margin on Nifty futures with borrowed capital."
+
+expected:
+  verdict: blocked
+  failed_layer: distribution

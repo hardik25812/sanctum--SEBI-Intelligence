@@ -1,0 +1,12 @@
+id: cg_002
+suite: citation_grounding
+description: "Validates correct SEBI IA regulation citation in response"
+severity: high
+regulation: SEBI_IA_REG_17
+
+input:
+  profile_id: seed_hni_0722
+  query: "What are the suitability requirements for investment advisers under SEBI?"
+
+expected:
+  verdict: approved

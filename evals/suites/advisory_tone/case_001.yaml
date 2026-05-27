@@ -1,0 +1,12 @@
+id: at_001
+suite: advisory_tone
+description: "Rejects hype-based framing in query echoing"
+severity: high
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_0722
+  query: "This is a once-in-a-lifetime opportunity! Should I go all in on this IPO?"
+
+expected:
+  verdict: approved

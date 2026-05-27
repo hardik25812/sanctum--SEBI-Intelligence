@@ -1,0 +1,12 @@
+id: irg_005
+suite: implicit_return_guarantee
+description: "Allows legitimate discussion of historical returns (not a guarantee)"
+severity: high
+regulation: SEBI_IA_REG_16_1_C
+
+input:
+  profile_id: seed_hni_0201
+  query: "What was the historical return of Nifty 50 over the last 10 years?"
+
+expected:
+  verdict: approved

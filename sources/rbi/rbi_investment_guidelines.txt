@@ -1,0 +1,30 @@
+RESERVE BANK OF INDIA - KEY GUIDELINES FOR RETAIL INVESTORS
+
+1. Fixed Deposit Insurance
+Deposits with scheduled commercial banks are insured by the Deposit Insurance and Credit Guarantee Corporation (DICGC) up to ₹5,00,000 per depositor per bank.
+
+2. Priority Sector Lending
+As per RBI guidelines, banks are required to lend a specified percentage of their adjusted net bank credit to priority sectors including agriculture, MSMEs, education, housing, and social infrastructure.
+
+3. Digital Payment Guidelines
+RBI's guidelines on digital payments ensure:
+(a) Two-factor authentication for all electronic transactions
+(b) Customer liability limits in case of unauthorized transactions
+(c) Turn-around time for resolution of failed transactions
+
+4. External Commercial Borrowings (ECB)
+Companies may raise ECB under the automatic route within certain limits:
+(a) Up to USD 750 million per financial year under Track I
+(b) Minimum average maturity period requirements apply
+
+5. NRI Investment Framework
+Non-Resident Indians (NRIs) may invest in India through:
+(a) Portfolio Investment Scheme (PIS) — up to 5% of paid-up capital of an Indian company
+(b) Foreign Direct Investment (FDI) — as per sectoral caps
+(c) NRE/NRO deposit accounts with repatriation facilities
+
+6. Sovereign Gold Bond Scheme
+RBI issues Sovereign Gold Bonds on behalf of the Government of India:
+(a) Tenor: 8 years with exit option from 5th year
+(b) Annual interest rate: 2.50% on the nominal value
+(c) Tax: Capital gains tax exemption on redemption

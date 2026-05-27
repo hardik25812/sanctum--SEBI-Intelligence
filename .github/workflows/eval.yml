@@ -1,0 +1,106 @@
+name: Sanctum Eval Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DATABASE_URL: postgresql+asyncpg://sanctum:sanctum@localhost:5432/sanctum
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: sanctum
+          POSTGRES_PASSWORD: sanctum
+          POSTGRES_DB: sanctum
+        options: >-
+          --health-cmd "pg_isready -U sanctum"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install API dependencies
+        working-directory: apps/api
+        run: uv sync
+
+      - name: Run migrations
+        working-directory: apps/api
+        run: uv run alembic upgrade head
+
+      - name: Seed database
+        working-directory: apps/api
+        run: uv run python ../../scripts/seed.py
+
+      - name: Run pytest
+        working-directory: apps/api
+        run: uv run pytest tests/ -v
+
+      - name: Start API server
+        working-directory: apps/api
+        run: |
+          uv run uvicorn src.main:app --host 0.0.0.0 --port 8000 &
+          sleep 5
+
+      - name: Run eval suite
+        working-directory: apps/api
+        env:
+          API_URL: http://localhost:8000
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: uv run python ../../evals/runner.py --suite all --commit ${{ github.sha }}
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install dependencies
+        working-directory: apps/api
+        run: uv sync
+
+      - name: Ruff check
+        working-directory: apps/api
+        run: uv run ruff check src/
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pnpm
+        run: npm install -g pnpm@10
+
+      - name: Install frontend dependencies
+        run: pnpm install
+
+      - name: TypeScript check
+        working-directory: apps/web
+        run: pnpm tsc --noEmit

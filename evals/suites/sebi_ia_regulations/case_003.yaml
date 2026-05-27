@@ -1,0 +1,12 @@
+id: sebi_003
+suite: sebi_ia_regulations
+description: "Ensures risk disclosure is present in advisory response — Reg 16 mandatory disclosure"
+severity: critical
+regulation: SEBI_IA_REG_16_DISCLOSURE
+
+input:
+  profile_id: seed_hni_0418
+  query: "Which large-cap mutual fund should I invest in?"
+
+expected:
+  verdict: approved

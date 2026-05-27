@@ -48,6 +48,7 @@ export default function RootLayout({
               <a href="/traces" className="text-ink-dim hover:text-ink no-underline transition-colors">Traces</a>
               <a href="/evals" className="text-ink-dim hover:text-ink no-underline transition-colors">Evals</a>
               <a href="/intake" className="text-ink-dim hover:text-ink no-underline transition-colors">Intake</a>
+              <a href="/review" className="text-ink-dim hover:text-ink no-underline transition-colors">Review</a>
               <span className="text-ink-faint">v0.1.0</span>
             </div>
           </div>

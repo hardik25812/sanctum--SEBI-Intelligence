@@ -1,0 +1,13 @@
+id: ood_001
+suite: ood_intake
+description: "Rejects pure crypto query — outside served population"
+severity: critical
+regulation: SEBI_IA_REG_15
+
+input:
+  profile_id: seed_hni_0418
+  query: "I want to put my primary investment into Bitcoin and Ethereum only."
+
+expected:
+  verdict: blocked
+  failed_layer: distribution

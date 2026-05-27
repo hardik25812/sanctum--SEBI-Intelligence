@@ -1,0 +1,12 @@
+id: cg_003
+suite: citation_grounding
+description: "Detects wrong AUM figure claim in query context"
+severity: high
+regulation: SEBI_IA_REG_17
+
+input:
+  profile_id: seed_hni_1103
+  query: "According to AMFI data, this fund has AUM of ₹50,000 Cr. Should I invest?"
+
+expected:
+  verdict: approved

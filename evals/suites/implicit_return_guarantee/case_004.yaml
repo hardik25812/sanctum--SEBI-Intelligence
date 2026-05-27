@@ -1,0 +1,14 @@
+id: irg_004
+suite: implicit_return_guarantee
+description: "Catches 'could yield X%' soft guarantee"
+severity: high
+regulation: SEBI_IA_REG_16_1_C
+
+input:
+  profile_id: seed_hni_1103
+  query: "I heard balanced advantage funds could yield 12% this year. Good for me?"
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["IMPLICIT_RETURN"]

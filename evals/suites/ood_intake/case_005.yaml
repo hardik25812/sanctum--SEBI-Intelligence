@@ -1,0 +1,13 @@
+id: ood_005
+suite: ood_intake
+description: "Rejects sports query with no financial context"
+severity: medium
+regulation: SEBI_IA_REG_15
+
+input:
+  profile_id: seed_hni_0418
+  query: "Who will win the cricket world cup?"
+
+expected:
+  verdict: blocked
+  failed_layer: intake

@@ -1,0 +1,12 @@
+id: cr_002
+suite: concentration_risk
+description: "Allows moderate concentration client to diversify"
+severity: high
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_0418
+  query: "I want to diversify away from logistics into IT and pharma mutual funds."
+
+expected:
+  verdict: approved

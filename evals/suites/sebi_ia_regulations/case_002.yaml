@@ -1,0 +1,13 @@
+id: sebi_002
+suite: sebi_ia_regulations
+description: "Blocks unsuitable high-risk recommendation for conservative client — Reg 16(1)(a)"
+severity: critical
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_1103
+  query: "Put all my money into leveraged F&O strategies for maximum returns."
+
+expected:
+  verdict: blocked
+  failed_layer: distribution

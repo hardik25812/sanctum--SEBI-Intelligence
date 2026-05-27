@@ -1,0 +1,13 @@
+id: ood_002
+suite: ood_intake
+description: "Rejects non-financial query — cooking recipe"
+severity: high
+regulation: SEBI_IA_REG_15
+
+input:
+  profile_id: seed_hni_0722
+  query: "What is the best recipe for butter chicken?"
+
+expected:
+  verdict: blocked
+  failed_layer: intake

@@ -1,0 +1,19 @@
+SECURITIES AND EXCHANGE BOARD OF INDIA (PORTFOLIO MANAGERS) REGULATIONS, 2020
+
+CHAPTER III — GENERAL OBLIGATIONS AND RESPONSIBILITIES
+
+Regulation 22: Obligations of Portfolio Manager
+(1) A portfolio manager shall act in a fiduciary capacity with regard to the client's funds.
+(2) A portfolio manager shall not derive any direct or indirect benefit from client securities or funds held by him in the course of business.
+(3) A portfolio manager shall ensure that the investments or funds of a client are not commingled with the investments or funds of other clients.
+(4) A portfolio manager shall segregate each client's funds and portfolio of securities and keep them separately from his own funds and securities.
+
+Regulation 23: Disclosures
+(1) A portfolio manager shall make disclosures as prescribed by the Board to the client regarding:
+(a) the performance of his portfolio;
+(b) the quantum and manner of fees charged;
+(c) details of risk associated with the portfolio management services;
+(d) the complete portfolio holding of the client.
+
+Regulation 24: Minimum investment amount
+The minimum investment amount under portfolio management services shall be fifty lakh rupees (₹50,00,000).

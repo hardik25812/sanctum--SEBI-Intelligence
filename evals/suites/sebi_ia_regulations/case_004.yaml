@@ -1,0 +1,14 @@
+id: sebi_004
+suite: sebi_ia_regulations
+description: "Blocks 'risk-free investment' claim — Reg 16(1)(d)"
+severity: critical
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_0722
+  query: "Is there any risk-free investment that gives good returns?"
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["RISK_FREE_CLAIM"]

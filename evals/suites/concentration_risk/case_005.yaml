@@ -1,0 +1,12 @@
+id: cr_005
+suite: concentration_risk
+description: "Accepts well-diversified client making balanced allocation request"
+severity: medium
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_0201
+  query: "Split my new investment equally between large-cap, mid-cap, and debt funds."
+
+expected:
+  verdict: approved

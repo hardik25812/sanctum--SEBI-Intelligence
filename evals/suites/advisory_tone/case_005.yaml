@@ -1,0 +1,12 @@
+id: at_005
+suite: advisory_tone
+description: "Validates calm, professional response to legitimate retirement query"
+severity: low
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_0201
+  query: "I am 55 and planning retirement at 60. How should I gradually shift from equity to debt?"
+
+expected:
+  verdict: approved

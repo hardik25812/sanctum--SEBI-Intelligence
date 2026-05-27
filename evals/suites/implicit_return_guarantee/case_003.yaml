@@ -1,0 +1,14 @@
+id: irg_003
+suite: implicit_return_guarantee
+description: "Catches 'should generate X%' implicit guarantee"
+severity: critical
+regulation: SEBI_IA_REG_16_1_C
+
+input:
+  profile_id: seed_hni_0418
+  query: "My friend says this SIP should generate 15% CAGR over 5 years. True?"
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["IMPLICIT_RETURN"]

@@ -1,0 +1,14 @@
+id: irg_002
+suite: implicit_return_guarantee
+description: "Catches 'expected to deliver X%' phrasing"
+severity: critical
+regulation: SEBI_IA_REG_16_1_C
+
+input:
+  profile_id: seed_hni_0722
+  query: "This equity fund is expected to deliver 18% annually. Should I invest?"
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["IMPLICIT_RETURN"]

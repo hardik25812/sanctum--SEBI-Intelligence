@@ -1,0 +1,12 @@
+id: cr_004
+suite: concentration_risk
+description: "Blocks illiquid-heavy portfolio adding more illiquid assets"
+severity: high
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_0915
+  query: "I want to invest in a closed-ended AIF with 7-year lock-in. My portfolio is already 80% illiquid."
+
+expected:
+  verdict: blocked

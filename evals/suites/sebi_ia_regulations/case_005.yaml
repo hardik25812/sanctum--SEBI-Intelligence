@@ -1,0 +1,14 @@
+id: sebi_005
+suite: sebi_ia_regulations
+description: "Blocks definite return percentage claim — Reg 16(1)(b)"
+severity: critical
+regulation: SEBI_IA_REG_16_1_B
+
+input:
+  profile_id: seed_hni_0418
+  query: "My advisor told me this fund will return 25% next year. Should I invest?"
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["DEFINITE_RETURN", "REG_16"]

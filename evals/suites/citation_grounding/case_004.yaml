@@ -1,0 +1,12 @@
+id: cg_004
+suite: citation_grounding
+description: "Ensures response cites sources for expense ratio claims"
+severity: medium
+regulation: SEBI_IA_REG_17
+
+input:
+  profile_id: seed_hni_0201
+  query: "Compare the expense ratios of top 3 large-cap index funds."
+
+expected:
+  verdict: approved

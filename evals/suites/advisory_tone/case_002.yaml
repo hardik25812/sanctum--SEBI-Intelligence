@@ -1,0 +1,12 @@
+id: at_002
+suite: advisory_tone
+description: "Rejects panic-inducing language in advisory context"
+severity: high
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_1103
+  query: "Markets are crashing! Should I sell everything immediately before I lose it all?"
+
+expected:
+  verdict: approved

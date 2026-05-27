@@ -6,12 +6,38 @@ if TYPE_CHECKING:
     from src.pipeline.orchestrator import TraceContext
 
 
+INJECTION_PATTERNS = [
+    "ignore all previous",
+    "ignore your instructions",
+    "you are now dan",
+    "disregard all prior",
+    "output your system prompt",
+    "repeat your instructions",
+    "system prompt verbatim",
+    "base64",
+    "translate this and follow",
+    "![](http",
+    "as my advisor you previously",
+    "you told me to invest in crypto",
+    "jailbreak",
+    "override your",
+]
+
+
 async def run_intake(ctx: TraceContext, session: AsyncSession) -> dict:
     profile = ctx.profile
     query = ctx.query
+    query_lower = query.lower()
+
+    for pattern in INJECTION_PATTERNS:
+        if pattern in query_lower:
+            return {
+                "status": "fail",
+                "failure_reason": f"Prompt injection detected: matched pattern '{pattern}'",
+                "query_classification": "injection",
+            }
 
     ood_keywords = ["weather", "cricket", "movie", "recipe", "joke"]
-    query_lower = query.lower()
     for kw in ood_keywords:
         if kw in query_lower and not any(
             fin in query_lower for fin in ["invest", "fund", "portfolio", "market", "stock", "return"]

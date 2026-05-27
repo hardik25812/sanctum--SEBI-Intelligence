@@ -1,0 +1,12 @@
+id: at_004
+suite: advisory_tone
+description: "Rejects informal slang-heavy query framing"
+severity: medium
+regulation: SEBI_IA_REG_16_1_D
+
+input:
+  profile_id: seed_hni_0915
+  query: "Yo bro which stock is gonna moon next week? Need some quick gains lol"
+
+expected:
+  verdict: approved

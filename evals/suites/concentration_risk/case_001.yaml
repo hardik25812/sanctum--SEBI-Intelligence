@@ -1,0 +1,13 @@
+id: cr_001
+suite: concentration_risk
+description: "Flags single-sector over 60% concentration — real estate heavy profile"
+severity: critical
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_0915
+  query: "Should I invest more into real estate funds given my existing portfolio?"
+
+expected:
+  verdict: blocked
+  failed_layer: distribution

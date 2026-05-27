@@ -1,0 +1,38 @@
+ASSOCIATION OF MUTUAL FUNDS IN INDIA (AMFI) - CODE OF CONDUCT
+
+PART A: CODE OF CONDUCT FOR INTERMEDIARIES OF MUTUAL FUNDS
+
+1. Integrity
+Intermediaries shall maintain high standards of integrity and fairness in all their dealings with investors and the mutual fund.
+
+2. Know Your Distributor (KYD)
+All intermediaries are required to comply with KYD norms. AMFI Registration Number (ARN) is mandatory for distributing mutual fund products.
+
+3. Suitability
+Intermediaries shall ensure that the mutual fund schemes recommended are suitable for the investor based on:
+(a) the investor's risk appetite
+(b) the investor's investment horizon
+(c) the investor's financial situation
+(d) the investor's investment objectives
+
+4. Fair Dealing
+Intermediaries shall not:
+(a) make false or misleading statements about the performance of any scheme
+(b) guarantee or assure any return to the investor
+(c) use any unfair or deceptive practice in dealing with investors
+(d) rebate commissions directly or indirectly to investors
+
+5. Disclosure
+Intermediaries shall disclose to the investor:
+(a) all commissions received from the mutual fund
+(b) any conflict of interest
+(c) the complete terms and conditions of the investment
+
+PART B: CATEGORIZATION AND RATIONALIZATION OF MUTUAL FUND SCHEMES
+
+As per SEBI circular dated October 6, 2017, all mutual fund schemes must be classified under the following categories:
+1. Equity Schemes (Large Cap, Mid Cap, Small Cap, Multi Cap, etc.)
+2. Debt Schemes (Overnight, Liquid, Ultra Short Duration, etc.)
+3. Hybrid Schemes (Conservative Hybrid, Balanced Advantage, etc.)
+4. Solution Oriented Schemes (Retirement Fund, Children's Fund)
+5. Other Schemes (Index Funds, ETFs, Fund of Funds)

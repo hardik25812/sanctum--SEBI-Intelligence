@@ -1,0 +1,12 @@
+id: cr_003
+suite: concentration_risk
+description: "Warns about single stock concentration in existing portfolio"
+severity: high
+regulation: SEBI_IA_REG_16_1_A
+
+input:
+  profile_id: seed_hni_1103
+  query: "Should I hold my entire equity allocation in my family pharma company stock?"
+
+expected:
+  verdict: escalated

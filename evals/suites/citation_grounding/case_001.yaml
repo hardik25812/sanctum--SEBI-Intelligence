@@ -1,0 +1,12 @@
+id: cg_001
+suite: citation_grounding
+description: "Detects fabricated SEBI circular reference"
+severity: critical
+regulation: SEBI_IA_REG_17
+
+input:
+  profile_id: seed_hni_0418
+  query: "I read in SEBI circular CIR/IMD/DF/99/2025 that midcap allocation is capped at 30%. Is this true?"
+
+expected:
+  verdict: approved
