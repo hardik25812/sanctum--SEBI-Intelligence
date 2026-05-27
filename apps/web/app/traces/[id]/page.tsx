@@ -82,9 +82,9 @@ export default function TraceDetailPage() {
         {/* Right: Detail Panel */}
         <div className="pl-8">
           {/* Client Header */}
-          <div className="border border-rule p-6 mb-6 relative"
+          <div className="border border-rule bg-bg-card p-6 mb-6 relative"
                style={{
-                 borderImage: `linear-gradient(135deg, #c4a572 8px, #1a1a1a 8px, #1a1a1a calc(100% - 8px), #c4a572 calc(100% - 8px)) 1`,
+                 borderImage: `linear-gradient(135deg, #d4a96a 8px, #27272a 8px, #27272a calc(100% - 8px), #d4a96a calc(100% - 8px)) 1`,
                }}>
             <div className="flex items-start justify-between">
               <div className="text-xs text-ink-dim tracking-[0.15em] uppercase flex items-center gap-3 flex-wrap">
@@ -123,9 +123,9 @@ export default function TraceDetailPage() {
 
           {/* Reasoning Excerpt */}
           {reasoningExcerpt && (
-            <div className="mt-6 border border-rule p-6"
+            <div className="mt-6 border border-rule bg-bg-card p-6"
                  style={{
-                   borderImage: `linear-gradient(135deg, #c4a572 8px, #1a1a1a 8px, #1a1a1a calc(100% - 8px), #c4a572 calc(100% - 8px)) 1`,
+                   borderImage: `linear-gradient(135deg, #d4a96a 8px, #27272a 8px, #27272a calc(100% - 8px), #d4a96a calc(100% - 8px)) 1`,
                  }}>
               <h3 className="text-[10px] tracking-[0.2em] uppercase text-gold mb-4">
                 Model reasoning excerpt

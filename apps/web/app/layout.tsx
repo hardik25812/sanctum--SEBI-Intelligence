@@ -38,22 +38,22 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body className="bg-bg text-ink font-sans min-h-screen relative">
-        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-rule bg-bg/90 backdrop-blur-sm">
-          <div className="max-w-[1400px] mx-auto px-8 h-14 flex items-center justify-between">
-            <a href="/traces" className="flex items-center gap-2 no-underline hover:no-underline">
-              <span className="text-gold text-lg">&#9671;</span>
-              <span className="font-serif text-ink text-lg tracking-wide">Sanctum</span>
+        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-rule bg-bg/95 backdrop-blur-md">
+          <div className="max-w-[1400px] mx-auto px-8 h-16 flex items-center justify-between">
+            <a href="/traces" className="flex items-center gap-3 no-underline hover:no-underline">
+              <span className="text-gold text-xl">&#9671;</span>
+              <span className="font-serif text-ink text-xl tracking-wide">Sanctum</span>
             </a>
-            <div className="flex items-center gap-8 text-xs tracking-[0.15em] uppercase text-ink-dim">
-              <a href="/traces" className="text-ink-dim hover:text-ink no-underline transition-colors">Traces</a>
-              <a href="/evals" className="text-ink-dim hover:text-ink no-underline transition-colors">Evals</a>
-              <a href="/intake" className="text-ink-dim hover:text-ink no-underline transition-colors">Intake</a>
-              <a href="/review" className="text-ink-dim hover:text-ink no-underline transition-colors">Review</a>
-              <span className="text-ink-faint">v0.1.0</span>
+            <div className="flex items-center gap-8 text-[11px] tracking-[0.18em] uppercase">
+              <a href="/traces" className="text-ink-dim hover:text-gold no-underline transition-colors py-1 border-b border-transparent hover:border-gold/30">Traces</a>
+              <a href="/evals" className="text-ink-dim hover:text-gold no-underline transition-colors py-1 border-b border-transparent hover:border-gold/30">Evals</a>
+              <a href="/intake" className="text-ink-dim hover:text-gold no-underline transition-colors py-1 border-b border-transparent hover:border-gold/30">Intake</a>
+              <a href="/review" className="text-ink-dim hover:text-gold no-underline transition-colors py-1 border-b border-transparent hover:border-gold/30">Review</a>
+              <span className="text-ink-faint ml-2 text-[9px]">v0.1.0</span>
             </div>
           </div>
         </nav>
-        <main className="pt-14 relative z-10">
+        <main className="pt-16 relative z-10">
           {children}
         </main>
       </body>

@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #000000;
-  --color-bg-elev: #0a0a0a;
-  --color-bg-card: #0d0d0d;
-  --color-ink: #f4f1ea;
-  --color-ink-dim: #8a8680;
-  --color-ink-faint: #4a4742;
-  --color-rule: #1a1a1a;
-  --color-rule-bright: #2a2a2a;
-  --color-pass: #c4b896;
-  --color-fail: #b85c4a;
-  --color-warn: #d4a574;
-  --color-gold: #c4a572;
+  --color-bg: #09090b;
+  --color-bg-elev: #131316;
+  --color-bg-card: #18181b;
+  --color-ink: #fafaf9;
+  --color-ink-dim: #a8a29e;
+  --color-ink-faint: #57534e;
+  --color-rule: #27272a;
+  --color-rule-bright: #3f3f46;
+  --color-pass: #86efac;
+  --color-fail: #fca5a5;
+  --color-warn: #fcd34d;
+  --color-gold: #d4a96a;
 
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, sans-serif;
@@ -45,7 +45,7 @@ body::before {
   inset: 0;
   background: radial-gradient(
     ellipse 80% 60% at 50% 0%,
-    rgba(196, 165, 114, 0.03) 0%,
+    rgba(212, 169, 106, 0.06) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -53,7 +53,7 @@ body::before {
 }
 
 ::selection {
-  background: rgba(196, 165, 114, 0.25);
+  background: rgba(212, 169, 106, 0.3);
   color: var(--color-ink);
 }
 
