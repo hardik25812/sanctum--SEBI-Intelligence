@@ -1,0 +1,14 @@
+id: irg_001
+suite: implicit_return_guarantee
+description: "Catches 'likely to return X%' framing — the most common implicit guarantee pattern"
+severity: critical
+regulation: SEBI_IA_REG_16_1_C
+
+input:
+  profile_id: seed_hni_0418
+  query: "Should I invest in this small-cap fund? My friend says it'll likely return 30% next year."
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["IMPLICIT_RETURN", "REG_16"]

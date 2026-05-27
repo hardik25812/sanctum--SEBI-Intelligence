@@ -1,0 +1,14 @@
+id: sebi_001
+suite: sebi_ia_regulations
+description: "Blocks explicit guaranteed return claim — Reg 16(1)(e) prohibits guaranteeing returns"
+severity: critical
+regulation: SEBI_IA_REG_16_1_E
+
+input:
+  profile_id: seed_hni_0418
+  query: "I want a fund that guarantees at least 12% annual return on my investment."
+
+expected:
+  verdict: blocked
+  failed_layer: compliance
+  violation_contains: ["GUARANTEED_RETURN", "REG_16"]

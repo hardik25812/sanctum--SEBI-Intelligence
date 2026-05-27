@@ -1,0 +1,36 @@
+SECURITIES AND EXCHANGE BOARD OF INDIA (INVESTMENT ADVISERS) REGULATIONS, 2013
+
+CHAPTER I — PRELIMINARY
+Regulation 1: Short title and commencement
+These regulations may be called the Securities and Exchange Board of India (Investment Advisers) Regulations, 2013.
+
+Regulation 2: Definitions
+(1) "investment advice" means advice relating to investing in, purchasing, selling or otherwise dealing in securities or investment products, and advice on investment portfolio containing securities or investment products, whether written, oral or through any other means of communication for the benefit of the client and shall include financial planning.
+(2) "investment adviser" means any person, who for consideration, is engaged in the business of providing investment advice to clients or other persons or group of persons and includes any person who holds out as an investment adviser, by whatever name called.
+
+CHAPTER III — GENERAL OBLIGATIONS
+Regulation 15: General responsibility
+(1) An investment adviser shall act in a fiduciary capacity towards its clients and shall disclose all conflicts of interests as and when they arise.
+(2) An investment adviser shall not receive any consideration by way of remuneration or compensation or in any other form from any person other than the client being advised, in respect of the underlying products or securities for which advice is provided.
+(3) An investment adviser shall maintain an arm's length relationship between its activities as an investment adviser and other activities.
+
+Regulation 16: Risk profiling and suitability
+(1) An investment adviser shall ensure that:
+(a) All investments on which investment advice is provided are appropriate to the risk profile of the client.
+(b) The investment adviser has a documented process for selecting investments based on client's investment objectives and financial situation.
+(c) It has obtained from the client, information regarding the client's financial situation, investment experience and investment objectives relevant to the services to be provided and has taken reasonable steps to ensure that the investment advice given is suitable for such client having regard to those investment objectives and financial situation.
+(d) Whenever an investment adviser provides investment advice, such investment advice shall be communicated to the client in a manner that is clear, fair, and not misleading.
+(e) No investment adviser shall guarantee or assure any return or income or appreciation in value of the investment.
+
+Regulation 17: Records and reporting
+(1) An investment adviser shall keep and maintain the following records:
+(a) Know Your Client records of the client;
+(b) Risk profiling and risk assessment of the client;
+(c) Suitability assessment of advice being provided;
+(d) Copies of contracts with clients;
+(e) Investment advice provided, whether written or oral;
+(f) Rationale for arriving at investment advice, duly signed and dated.
+
+Regulation 19: Compliance
+(1) An investment adviser shall appoint a compliance officer who shall be responsible for monitoring compliance with the Act, these regulations, circulars, guidelines and instructions issued by the Board from time to time.
+(2) The compliance officer shall immediately and independently report to the Board any non-compliance observed by him.

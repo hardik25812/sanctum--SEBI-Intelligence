@@ -1,0 +1,14 @@
+{
+  "name": "sanctum",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @sanctum/web dev",
+    "build": "pnpm --filter @sanctum/web build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
