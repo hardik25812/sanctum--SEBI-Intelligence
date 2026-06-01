@@ -1,12 +1,22 @@
 "use client";
 
 import type { TraceStep } from "@/lib/types";
+import { cn } from "@/lib/utils";
+import { 
+  Globe, 
+  Search, 
+  Brain, 
+  ShieldAlert, 
+  CheckCircle2, 
+  XCircle 
+} from "lucide-react";
 
 interface CheckItem {
   label: string;
   value: string;
   detail: string;
   passed: boolean;
+  icon: any;
 }
 
 function extractChecks(steps: TraceStep[]): CheckItem[] {
@@ -22,28 +32,31 @@ function extractChecks(steps: TraceStep[]): CheckItem[] {
     checks.push({
       label: "Distribution",
       value: p.in_distribution ? "In distribution" : "Out of distribution",
-      detail: `OOD score \u00b7 ${(p.ood_score as number)?.toFixed(2) ?? "—"} \u00b7 Threshold \u00b7 0.40`,
+      detail: `OOD score \u00b7 ${(p.ood_score as number)?.toFixed(2) ?? "—"}`,
       passed: distribution.status === "pass",
+      icon: Globe,
     });
   }
 
   if (grounding) {
     const p = grounding.payload;
     checks.push({
-      label: "Citation grounding",
-      value: `${p.grounded_claims ?? 0} of ${p.total_claims ?? 0} sources verified`,
-      detail: `SEBI IA Reg. \u00b7 AMFI \u00b7 Audit DD`,
+      label: "Grounding",
+      value: `${p.grounded_claims ?? 0} of ${p.total_claims ?? 0} verified`,
+      detail: `Citations verified against primary sources`,
       passed: grounding.status === "pass",
+      icon: Search,
     });
   }
 
   if (reasoning) {
     const p = reasoning.payload;
     checks.push({
-      label: "Adversarial divergence",
+      label: "Divergence",
       value: `${((p.divergence_score as number) ?? 0).toFixed(2)}`,
-      detail: `Divergence \u00b7 ${(p.divergence_score as number) <= 0.35 ? "within" : "exceeds"} threshold \u00b7 0.35`,
+      detail: `Adversarial cross-check variance`,
       passed: (p.divergence_score as number) <= 0.35,
+      icon: Brain,
     });
   }
 
@@ -51,16 +64,13 @@ function extractChecks(steps: TraceStep[]): CheckItem[] {
     const p = compliance.payload;
     const violations = (p.violations as Array<Record<string, string>>) ?? [];
     checks.push({
-      label: "SEBI compliance",
-      value:
-        violations.length > 0
-          ? `Violation \u00b7 IA Reg. ${violations[0]?.rule_id?.split("_").pop() ?? ""}`
-          : `${p.total_rules_checked ?? 0} / ${p.total_rules_checked ?? 0} passed`,
-      detail:
-        violations.length > 0
-          ? violations.map((v) => v.violation_type).join(", ")
-          : "All deterministic + LLM-judge rules passed",
+      label: "Compliance",
+      value: violations.length > 0 ? "Violation detected" : "Standards met",
+      detail: violations.length > 0 
+        ? violations[0]?.violation_type 
+        : "Deterministic & LLM rules passed",
       passed: compliance.status === "pass",
+      icon: ShieldAlert,
     });
   }
 
@@ -71,30 +81,42 @@ export function CheckGrid({ steps }: { steps: TraceStep[] }) {
   const checks = extractChecks(steps);
 
   return (
-    <div className="grid grid-cols-2 gap-px bg-rule">
-      {checks.map((check) => (
-        <div key={check.label} className="bg-bg-card p-5">
-          <div className="flex items-center gap-2 mb-2">
-            <span
-              className={`text-[10px] tracking-[0.15em] uppercase ${
-                check.passed ? "text-pass" : "text-fail"
-              }`}
-            >
-              {check.passed ? "\u25cf" : "\u25cf"} {check.label}
-            </span>
-          </div>
-          <p
-            className={`font-serif text-base ${
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      {checks.map((check) => {
+        const Icon = check.icon;
+        return (
+          <div key={check.label} className="bg-bg-card/30 border border-rule p-5 relative group overflow-hidden transition-all hover:bg-bg-elev">
+            <div className={cn(
+              "absolute top-0 right-0 w-16 h-16 opacity-5 -mr-4 -mt-4 transition-all group-hover:opacity-10 group-hover:scale-110",
+              check.passed ? "text-pass" : "text-fail"
+            )}>
+              <Icon size={64} />
+            </div>
+            
+            <div className="flex items-center gap-2 mb-3">
+              <div className={cn(
+                "w-1.5 h-1.5 rounded-full",
+                check.passed ? "bg-pass shadow-[0_0_8px_rgba(134,239,172,0.4)]" : "bg-fail shadow-[0_0_8px_rgba(252,165,165,0.4)]"
+              )} />
+              <span className="text-[10px] tracking-[0.2em] uppercase text-ink-faint font-mono">
+                {check.label}
+              </span>
+            </div>
+            
+            <p className={cn(
+              "font-serif text-lg leading-tight mb-1",
               check.passed ? "text-ink" : "text-fail"
-            }`}
-          >
-            {check.value}
-          </p>
-          <p className="text-ink-faint text-[10px] tracking-wide mt-1 uppercase">
-            {check.detail}
-          </p>
-        </div>
-      ))}
+            )}>
+              {check.value}
+            </p>
+            
+            <p className="text-ink-dim text-[10px] tracking-wide font-serif italic uppercase opacity-60">
+              {check.detail}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
 }
+

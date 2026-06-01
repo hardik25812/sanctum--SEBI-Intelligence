@@ -38,6 +38,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body className="bg-bg text-ink font-sans min-h-screen relative">
+        <div className="noise" />
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-rule bg-bg/95 backdrop-blur-md">
           <div className="max-w-[1400px] mx-auto px-8 h-16 flex items-center justify-between">
             <a href="/traces" className="flex items-center gap-3 no-underline hover:no-underline">
